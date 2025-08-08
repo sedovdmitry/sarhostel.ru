@@ -1,0 +1,73 @@
+.env
+*.env
+config.php
+*.config.php
+.htaccess
+htpasswd
+
+# Системные файлы
+.DS_Store
+.idea/
+.vscode/
+Thumbs.db
+
+# Логи и кэш
+*.log
+cache/
+tmp/
+*.tmp
+
+# Зависимости и билды
+node_modules/
+vendor/
+composer.lock
+package-lock.json
+yarn.lock
+
+# Gulp-сборка
+dist/
+build/
+.sass-cache/
+
+# Резервные копии и временные файлы
+*.bak
+*.swp
+*.swo
+~$*
+
+# Файлы редакторов
+*.sublime-*
+*.code-workspace
+
+# Полезное
+SEO.txt
+/otel
+
+# Чувствительные файлы - логи ошибок
+*.error.log
+error_log
+sarhostel.ru.error.log
+test/error_log
+
+# Файлы верификации поисковых систем
+google*.html
+yandex*.html
+wmail*.html
+
+# Тестовые файлы и отладка
+/test/
+test/
+
+# Временные файлы и кэш
+.sass-cache/
+*.cache
+*.tmp
+
+# Файлы конфигурации сервера
+.__htaccess
+.htaccess
+
+# Резервные копии
+backup/
+*.backup
+*.old
