@@ -1,3 +1,6 @@
+<?php
+declare(strict_types=1);
+?>
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -243,9 +246,6 @@
       <!-- /.container-fluid -->
     </nav>
     <?php
-      // Объявление типа документа для PHP 8.2
-      declare(strict_types=1);
-      
       /*
       $html = file_get_contents("https://www.booking.com/hotel/ru/hostel-den-39-amp-noch-39.ru.html");
       $DOM = new DOMDocument();
