@@ -1,0 +1,31 @@
+```yaml
+   name: Deploy to VDS
+
+   on:
+     push:
+       branches:
+         - main
+
+   jobs:
+     deploy:
+       runs-on: ubuntu-latest
+       steps:
+       - name: Checkout code
+         uses: actions/checkout@v3
+
+       - name: Setup SSH
+         run: |
+           mkdir -p ~/.ssh
+           echo "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/id_ed25519
+           chmod 600 ~/.ssh/id_ed25519
+           ssh-keyscan -p 2022 -H 45.8.251.24 >> ~/.ssh/known_hosts
+
+       - name: Deploy to VDS
+         run: |
+           ssh -i ~/.ssh/id_ed25519 -p 2022 deploy@45.8.251.24 << 'EOF'
+             cd /var/www/sarhostel.ru/public
+             git pull origin main || git clone git@github.com:sedovdmitry/sarhostel.ru.git .
+             sudo chown -R www-data:www-data /var/www/sarhostel.ru/public
+             sudo chmod -R 755 /var/www/sarhostel.ru/public
+           EOF
+   ```
