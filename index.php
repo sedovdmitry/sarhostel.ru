@@ -700,24 +700,6 @@
     </div>
     <br />
     <br />
-    <?php
-      /*
-      <div style="display:none" itemscope itemtype="https://schema.org/Hostel">
-        <span itemprop="name">День&Ночь</span>
-        <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-          <span itemprop="ratingValue">4.8</span> основано на <span itemprop="reviewCount"><?php echo $countReviews; ?>
-    </span> отзывов
-    </div>
-    <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-    <span itemprop="streetAddress">ул. Вольская</span>
-    <span itemprop="addressLocality">Саратов</span>,
-    <span itemprop="addressRegion">Саратовская обл.</span> <span itemprop="postalCode">410028</span>
-    </div>
-    <span itemprop="telephone">(917)985-37-00, (927)629-15-97</span>
-    <a itemprop="url" href="https://sarhostel.ru">https://sarhostel.ru</a> Price Range: <span itemprop="priceRange">700-1100 руб.</span>
-    </div>
-    */ ?>
-
     <h4>2015-<?php echo date("Y"); ?> &copy; <i>Хостел «День&Ночь»</i></h4>
     <p>ИП Лыков Аркадий Иванович</p>
     <p>ОГРН 311642225100019</p>
