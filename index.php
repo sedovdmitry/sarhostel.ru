@@ -243,6 +243,9 @@
       <!-- /.container-fluid -->
     </nav>
     <?php
+      // Объявление типа документа для PHP 8.2
+      declare(strict_types=1);
+      
       /*
       $html = file_get_contents("https://www.booking.com/hotel/ru/hostel-den-39-amp-noch-39.ru.html");
       $DOM = new DOMDocument();
@@ -563,7 +566,7 @@
     <?php
       date_default_timezone_set('Europe/Moscow');
       $currentdate = date('d.m.Y');
-      $tomorrowdate = new DateTime('tomorrow');  
+      $tomorrowdate = (new DateTime())->modify('+1 day');  
     ?>
     <section id="contact">
       <div class="container">
@@ -697,7 +700,7 @@
     </div>
     <br />
     <br />
-    <?
+    <?php
       /*
       <div style="display:none" itemscope itemtype="https://schema.org/Hostel">
         <span itemprop="name">День&Ночь</span>
@@ -715,7 +718,7 @@
     </div>
     */ ?>
 
-    <h4>2015-<?php echo date("Y"); ?> &copy; <i>Хостел «День и Ночь»</i></h4>
+    <h4>2015-<?php echo date("Y"); ?> &copy; <i>Хостел «День&Ночь»</i></h4>
     <p>ИП Лыков Аркадий Иванович</p>
     <p>ОГРН 311642225100019</p>
     </div>
@@ -748,7 +751,7 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/jquery.magnific-popup.min.js"></script>
-    <link rel="stylesheet" href="/css/jquery.magnific-popup.min.js">
+    <link rel="stylesheet" href="/css/magnific-popup.css">
     <script src="/js/fittext.js"></script>
     <script src="/js/creative.js"></script>
     <script>
@@ -770,7 +773,7 @@
       });
     </script>
     <script>
-      //var track = '<?php echo $countReviews; ?>';
+      //var track = '<?php echo isset($countReviews) ? $countReviews : '0'; ?>';
       //console.log(track);
       // Offset for Main Navigation
       /*
