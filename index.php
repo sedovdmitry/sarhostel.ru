@@ -583,7 +583,7 @@ declare(strict_types=1);
             <h4 class="section-heading">Забронировать через звонок</h4>
             <p>
               <a href="tel:+79179840504">
-                <i class="fa fa-volume-control-phone fa-3x wow bounceIn"></i>
+                <i class="fa fa-phone fa-3x wow bounceIn"></i>
               </a>
             </p>
           </div>
