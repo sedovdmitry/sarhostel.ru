@@ -23,11 +23,18 @@ jobs:
         run: |
           ssh -i ~/.ssh/id_ed25519 -p 2022 deploy@45.8.251.24 << 'EOF'
             cd /var/www/sarhostel.ru/public
+            git config --global --add safe.directory /var/www/sarhostel.ru/public
+            rm -f .git/index.lock
             if [ ! -d .git ]; then
               git clone git@github.com:sedovdmitry/sarhostel.ru.git .
             else
+              git fetch origin
+              git checkout main
+              git reset --hard origin/main
+              git clean -fd
               git pull origin main
             fi
             sudo chown -R www-data:www-data /var/www/sarhostel.ru/public
+            sudo chown -R deploy:deploy /var/www/sarhostel.ru/public/.git
             sudo chmod -R 755 /var/www/sarhostel.ru/public
           EOF
