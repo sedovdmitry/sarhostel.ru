@@ -1,0 +1,73 @@
+#logo-style-snow {
+    margin: 14px 0 0 -2px;
+}
+.icon-phone {
+	background-image: url("/images/hotel-styles/dafault/icons-phone.png");
+	background-repeat:no-repeat;
+	background-position:center right;
+    display: block;
+    float: right;
+    height: 90px;
+    width: 83px;
+	margin-left:0px;
+	padding-top: 12px;
+}
+
+/*--------------------LANG---------------------------*/
+.lang-new{margin-top:0px;}
+.lang-new #ua, .lang-new #ru, .lang-new #eng, .lang-new #gr, .lang-new #pl {
+    float: left;
+    margin-left: 6px;
+}
+.lang-new #ua, .lang-new #gr, .lang-new #pl{
+	display:none;
+}
+.lang-new #ru, .lang-new #eng{
+	display: inline-table;
+}
+.lang-new #ru a{
+	background-image:url("/images/hotel-styles/dafault/g-flag-ru.png");
+	display: inline-table;
+    height: 18px;
+    width: 24px;
+}
+.lang-new #eng a{
+	background-image:url("/images/hotel-styles/dafault/g-flag-en.png");
+	display: inline-table;
+    height: 18px;
+    width: 24px;
+}
+.mr7 {
+    display: inline-table;
+    margin: 0 68px 0 0;
+}
+/*-----------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

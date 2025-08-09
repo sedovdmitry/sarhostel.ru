@@ -733,7 +733,7 @@ declare(strict_types=1);
     <!-- Bootstrap Core JavaScript -->
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/jquery.magnific-popup.min.js"></script>
-    <link rel="stylesheet" href="/css/magnific-popup.css">
+    <link rel="stylesheet" href="/css/magnific-popup.min.css">
     <script src="/js/fittext.js"></script>
     <script src="/js/creative.js"></script>
     <script>
