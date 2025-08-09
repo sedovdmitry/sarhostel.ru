@@ -23,7 +23,11 @@ jobs:
         run: |
           ssh -i ~/.ssh/id_ed25519 -p 2022 deploy@45.8.251.24 << 'EOF'
             cd /var/www/sarhostel.ru/public
-            git pull origin main || git clone git@github.com:sedovdmitry/sarhostel.ru.git .
+            if [ ! -d .git ]; then
+              git clone git@github.com:sedovdmitry/sarhostel.ru.git .
+            else
+              git pull origin main
+            fi
             sudo chown -R www-data:www-data /var/www/sarhostel.ru/public
             sudo chmod -R 755 /var/www/sarhostel.ru/public
           EOF
