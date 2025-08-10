@@ -1,4 +1,6 @@
 User-agent: *
+Disallow: /
+Allow: /$
 Disallow: /.git
 Disallow: /less
 Disallow: /css
@@ -9,6 +11,8 @@ Disallow: /node_modules
 Disallow: /styles
 
 User-agent: Yandex
+Disallow: /
+Allow: /$
 Disallow: /.git
 Disallow: /less
 Disallow: /css
@@ -17,7 +21,6 @@ Disallow: /js
 Disallow: /font-awesome
 Disallow: /node_modules
 Disallow: /styles
-Disallow:
 Clean-param: utm
 Clean-param: utm_ya_campaign
 Clean-param: a
