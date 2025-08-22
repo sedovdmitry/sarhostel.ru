@@ -22,6 +22,7 @@ declare(strict_types=1);
     <!--<link rel="stylesheet" href="styles/bundle.min.css" type="text/css">-->
     <link rel="stylesheet" href="styles/main.min.css" type="text/css">
     <link rel="stylesheet" href="styles/buttons.css" type="text/css">
+    <link rel="stylesheet" href="styles/mobile-fix.css" type="text/css">
     <!-- Custom Fonts 
       <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>-->
     <link rel="preconnect" href="//fonts.googleapis.com">
@@ -210,7 +211,7 @@ declare(strict_types=1);
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -751,7 +752,14 @@ declare(strict_types=1);
           var selector = $(this).attr('href');
           var scrollBlock = $(this).attr('data-scroll-block') || 'center';
           var viewEl = document.querySelector(selector);
-          viewEl.scrollIntoView({block: scrollBlock, behavior: "smooth"});
+          
+          // Закрываем мобильное меню при клике на ссылку
+          $('.navbar-collapse').collapse('hide');
+          
+          // Небольшая задержка для корректного закрытия меню
+          setTimeout(function() {
+              viewEl.scrollIntoView({block: scrollBlock, behavior: "smooth"});
+          }, 300);
       });
     </script>
     <script>
@@ -772,6 +780,55 @@ declare(strict_types=1);
           limit: 10,
           width: screenWidth,
           attach: "*"
+      });
+    </script>
+    
+    <!-- Дополнительные исправления для мобильного меню -->
+    <script>
+      $(document).ready(function() {
+        // Исправление для мобильного меню Bootstrap
+        $(document).on('click.bs.collapse.data-api', '[data-toggle="collapse"]', function (e) {
+          var $this = $(this);
+          if (!$this.attr('data-target')) e.preventDefault();
+          
+          var $target = getTargetFromTrigger($this);
+          var data = $target.data('bs.collapse');
+          var option = data ? 'toggle' : $.extend({}, $this.data(), { trigger: this });
+          
+          $target.collapse(option);
+        });
+        
+        function getTargetFromTrigger($trigger) {
+          var href;
+          var target = $trigger.attr('data-target') || (href = $trigger.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '');
+          return $(target);
+        }
+        
+        // Синхронизация состояния бургер-кнопки
+        $('.navbar-collapse').on('show.bs.collapse', function () {
+          $('.navbar-toggle').removeClass('collapsed').attr('aria-expanded', 'true');
+        });
+        
+        $('.navbar-collapse').on('hide.bs.collapse', function () {
+          $('.navbar-toggle').addClass('collapsed').attr('aria-expanded', 'false');
+        });
+        
+        // Предотвращение двойного клика на мобильных устройствах
+        var touchStartY = 0;
+        var touchEndY = 0;
+        
+        $(document).on('touchstart', '.navbar-toggle', function(e) {
+          touchStartY = e.originalEvent.touches[0].clientY;
+        });
+        
+        $(document).on('touchend', '.navbar-toggle', function(e) {
+          touchEndY = e.originalEvent.changedTouches[0].clientY;
+          if (Math.abs(touchStartY - touchEndY) < 10) {
+            // Это клик, а не свайп
+            e.preventDefault();
+            $(this).click();
+          }
+        });
       });
     </script>
   </body>
