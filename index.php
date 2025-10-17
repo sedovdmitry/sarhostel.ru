@@ -18,8 +18,6 @@ declare(strict_types=1);
     <link rel="shortcut icon" href="https://sarhostel.ru/favicon.ico" type="image/x-icon" />
     <link rel="canonical" href="https://sarhostel.ru" />
     <title>Хостел Саратов, цены, фото, дешево, мини-гостиница</title>
-    <!-- all in one CSS -->
-    <!--<link rel="stylesheet" href="styles/bundle.min.css" type="text/css">-->
     <link rel="stylesheet" href="styles/main.min.css" type="text/css">
     <link rel="stylesheet" href="styles/buttons.css" type="text/css">
     <link rel="stylesheet" href="styles/mobile-fix.css" type="text/css">
@@ -627,19 +625,25 @@ declare(strict_types=1);
     </script>
     <!-- Put this div tag to the place, where the Comments block will be -->
     <div align="center">
-    <div id="vk_comments"></div>
-    </div>
-    <!--
-      <div align="center" id="TA_sswidecollectreview972" class="TA_sswidecollectreview">
-      
-          <ul id="Z17wVQn3M" class="TA_links NGbohly1XZx">
-              <li id="dN9yuMlq7P6" class="GRBrPtBIbJ">
-                  <img src="//www.tripadvisor.ru/img/cdsi/img2/branding/150_logo-16124-2.png" alt="TripAdvisor" />
-              </li>
-          </ul>
+      <!-- Fallback content -->
+      <div id="vk_comments_fallback" style="display: none;">
+        <p>Отзывы из ВК сейчас недоступны. Попробуйте позже.</p>
       </div>
-      <script src="https://www.jscache.com/wejs?wtype=sswidecollectreview&amp;uniq=972&amp;locationId=7734220&amp;lang=ru&amp;border=true&amp;display_version=2"></script>
-      -->
+      <!-- Widget container -->
+      <div id="vk_comments" style="opacity: 0;"></div>
+    </div>
+    <?php
+      /*
+        <div align="center" id="TA_sswidecollectreview972" class="TA_sswidecollectreview">
+          <ul id="Z17wVQn3M" class="TA_links NGbohly1XZx">
+            <li id="dN9yuMlq7P6" class="GRBrPtBIbJ">
+              <img src="//www.tripadvisor.ru/img/cdsi/img2/branding/150_logo-16124-2.png" alt="TripAdvisor" />
+            </li>
+          </ul>
+        </div>
+        <script src="https://www.jscache.com/wejs?wtype=sswidecollectreview&amp;uniq=972&amp;locationId=7734220&amp;lang=ru&amp;border=true&amp;display_version=2"></script>
+      */
+    ?>
     </div>
     </div>
     </section>
@@ -774,15 +778,7 @@ declare(strict_types=1);
       })
       */
     </script>
-    <script type="text/javascript">
-      var screenWidth = $(window).width() < 730 ? $(window).width() : "665";
-      VK.Widgets.Comments("vk_comments", {
-          limit: 10,
-          width: screenWidth,
-          attach: "*"
-      });
-    </script>
-    
+    <script src="/js/vk_comments_widget.js"></script>
     <!-- Дополнительные исправления для мобильного меню -->
     <script>
       $(document).ready(function() {
