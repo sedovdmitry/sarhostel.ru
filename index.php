@@ -332,7 +332,7 @@ declare(strict_types=1);
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box">
               <i class="fa fa-4x fa-map-marker wow bounceIn text-primary"></i>
-              <h3>самый центр Саратова</h3>
+              <h3>Самый центр Саратова</h3>
               <p class="text-muted">Мы находимся в историческом центре города, в тихом дворике</p>
             </div>
           </div>
