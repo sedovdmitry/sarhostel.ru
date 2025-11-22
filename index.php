@@ -884,7 +884,7 @@ declare(strict_types=1);
         });
       });
     </script>
-    <script>
+    <!-- <script>
       new WOW({
         boxClass:     'wow',
         animateClass: 'animated',
@@ -892,6 +892,6 @@ declare(strict_types=1);
         mobile:       true,
         live:         true
       }).init();
-    </script>
+    </script> -->
   </body>
 </html>
