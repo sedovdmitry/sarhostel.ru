@@ -340,7 +340,7 @@ declare(strict_types=1);
             <div class="service-box">
               <i class="fa fa-4x fa-hotel wow bounceIn text-primary" data-wow-delay=".1s"></i>
               <h3>Уютные комнаты</h3>
-              <p class="text-muted">Комнаты с евро-ремонтом: семейный номер, отдельные номера на четырех и восемь человек</p>
+              <p class="text-muted">Комнаты с евро-ремонтом: семейный номер, отдельные номера на пять и восемь человек</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
@@ -454,11 +454,11 @@ declare(strict_types=1);
           </div>
           <div class="col-lg-4 col-sm-6">
             <a class="portfolio-box">
-              <img loading="lazy" src="/img/portfolio/2025/saratov-hostel-den-i-noch-13.webp" class="img-responsive" alt="Саратов хостел, женская комната на четыре человека">
+              <img loading="lazy" src="/img/portfolio/2025/saratov-hostel-den-i-noch-13.webp" class="img-responsive" alt="Саратов хостел, женская комната на пять человек">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
-                    Женская общая комната на 4 человека
+                    Женская общая комната на 5 человек
                   </div>
                   <div class="project-name">
                     не тесно, стоиомость места 900&nbsp;₽
