@@ -1,33 +1,75 @@
-(function($) {
+(function ($) {
   "use strict"; // Start of use strict
 
   // Smooth scrolling using jQuery easing
-  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
+    if (
+      location.pathname.replace(/^\//, "") ==
+        this.pathname.replace(/^\//, "") &&
+      location.hostname == this.hostname
+    ) {
       var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
       if (target.length) {
-        $('html, body').animate({
-          scrollTop: (target.offset().top - 72)
-        }, 1000, "easeInOutExpo");
+        $("html, body").animate(
+          {
+            scrollTop: target.offset().top - 72,
+          },
+          1000,
+          "easeInOutExpo"
+        );
         return false;
       }
     }
   });
 
   // Closes responsive menu when a scroll trigger link is clicked
-  $('.js-scroll-trigger').click(function() {
-    $('.navbar-collapse').collapse('hide');
+  $(".js-scroll-trigger").click(function () {
+    $(".navbar-collapse").collapse("hide");
+  });
+
+  // Добавляем обработчик для мобильного меню
+  $(document).on("click", ".navbar-toggle", function (e) {
+    e.preventDefault();
+    var $navbarCollapse = $(".navbar-collapse");
+    var $toggle = $(this);
+
+    if ($navbarCollapse.hasClass("in")) {
+      $navbarCollapse.collapse("hide");
+      $toggle.addClass("collapsed");
+    } else {
+      $navbarCollapse.collapse("show");
+      $toggle.removeClass("collapsed");
+    }
+  });
+
+  // Обработка событий collapse для синхронизации состояния кнопки
+  $(".navbar-collapse").on("show.bs.collapse", function () {
+    $(".navbar-toggle").removeClass("collapsed");
+  });
+
+  $(".navbar-collapse").on("hide.bs.collapse", function () {
+    $(".navbar-toggle").addClass("collapsed");
+  });
+
+  // Закрываем меню при клике вне его области
+  $(document).on("click", function (e) {
+    if (
+      !$(e.target).closest(".navbar").length &&
+      $(".navbar-collapse").hasClass("in")
+    ) {
+      $(".navbar-collapse").collapse("hide");
+    }
   });
 
   // Activate scrollspy to add active class to navbar items on scroll
-  $('body').scrollspy({
-    target: '#mainNav',
-    offset: 75
+  $("body").scrollspy({
+    target: "#mainNav",
+    offset: 75,
   });
 
   // Collapse Navbar
-  var navbarCollapse = function() {
+  var navbarCollapse = function () {
     if ($("#mainNav").offset().top > 100) {
       $("#mainNav").addClass("navbar-scrolled");
     } else {
@@ -40,19 +82,18 @@
   $(window).scroll(navbarCollapse);
 
   // Magnific popup calls
-  $('#portfolio').magnificPopup({
-    delegate: 'a',
-    type: 'image',
-    tLoading: 'Loading image #%curr%...',
-    mainClass: 'mfp-img-mobile',
+  $("#portfolio").magnificPopup({
+    delegate: "a",
+    type: "image",
+    tLoading: "Loading image #%curr%...",
+    mainClass: "mfp-img-mobile",
     gallery: {
       enabled: true,
       navigateByImgClick: true,
-      preload: [0, 1]
+      preload: [0, 1],
     },
     image: {
-      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
-    }
+      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+    },
   });
-
 })(jQuery); // End of use strict

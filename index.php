@@ -1,3 +1,6 @@
+<?php
+declare(strict_types=1);
+?>
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -15,10 +18,9 @@
     <link rel="shortcut icon" href="https://sarhostel.ru/favicon.ico" type="image/x-icon" />
     <link rel="canonical" href="https://sarhostel.ru" />
     <title>Хостел Саратов, цены, фото, дешево, мини-гостиница</title>
-    <!-- all in one CSS -->
-    <!--<link rel="stylesheet" href="styles/bundle.min.css" type="text/css">-->
     <link rel="stylesheet" href="styles/main.min.css" type="text/css">
     <link rel="stylesheet" href="styles/buttons.css" type="text/css">
+    <link rel="stylesheet" href="styles/mobile-fix.css" type="text/css">
     <!-- Custom Fonts 
       <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>-->
     <link rel="preconnect" href="//fonts.googleapis.com">
@@ -26,9 +28,7 @@
     <link href='//fonts.googleapis.com/css?family=Open+Sans:400,400italic,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Lora:400,400italic,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css">
-    <!-- Plugin CSS 
-      <link rel="stylesheet" href="css/animate.min.css" type="text/css">
-      -->
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css"> 
     <!-- Custom CSS 
       <link rel="stylesheet" href="css/creative.css" type="text/css">
       -->
@@ -72,7 +72,7 @@
       "@context": "https://schema.org/",
       "@type": "Hostel",
       "name": "День&Ночь",
-      "description": "4-х местная женская комната, 6-ти местная мужская комната, отдельный трехместный номер",
+      "description": "4-х местная женская комната, 8-ми местная мужская комната, отдельный трехместный номер",
       "logo": "https://sarhostel.ru/img/favicon-source.png",
       "image": "https://sarhostel.ru/img/portfolio/kirova-2020/saratov-hostel-na-kirova-05.jpg",
       "address": {
@@ -82,8 +82,8 @@
         "addressCountry": "RU"
       },
       "telephone": "+7(917)984-05-04",
-      "email": "kattat69@mail.ru",
-      "priceRange": "700-1500 руб",
+      "email": "hostel.denjinoch@yandex.ru",
+      "priceRange": "800-3000 руб",
       "currenciesAccepted": "RUB",
       "hasMap": "https://yandex.ru/maps/?um=constructor%3A00e53c7d601bbc00c80512da7e76f3feb6f9cc17eb0a86237a3948aa411744b6&source=constructorLink",
       "url": "https://sarhostel.ru",
@@ -207,7 +207,7 @@
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -340,7 +340,7 @@
             <div class="service-box">
               <i class="fa fa-4x fa-hotel wow bounceIn text-primary" data-wow-delay=".1s"></i>
               <h3>Уютные комнаты</h3>
-              <p class="text-muted">Комнаты с евро-ремонтом на двух, четырех и шесть человек</p>
+              <p class="text-muted">Комнаты с евро-ремонтом: семейный номер, отдельные номера на четырех и восемь человек</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
@@ -353,10 +353,10 @@
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box">
               <i class="fa fa-4x fa-money wow bounceIn text-primary" data-wow-delay=".3s"></i>
-              <h3>Цены от 700 ₽</h3>
-              <p class="text-muted">Стандартная стоимость места: 700 рублей.</p>
-              <p class="text-muted"></p>
-              <p class="text-muted"></p>
+              <h3>Цены от 800 ₽</h3>
+                <p class="text-muted">Место в мужском номере: 800&nbsp;₽.</p>
+                <p class="text-muted">Место в женском номере: 900&nbsp;₽.</p>
+                <p class="text-muted">Семейный номер: от 2000&nbsp;₽.</p>
             </div>
           </div>
         </div>
@@ -372,7 +372,7 @@
             <div class="service-box">
               <i class="fa fa-4x fa-child wow bounceIn text-primary" data-wow-delay=".2s"></i>
               <h3>Скидки детям</h3>
-              <p class="text-muted">Детям до 10 лет скидка 150&nbsp;₽ от стандартной стоимости места</p>
+              <p class="text-muted">Детям до 10 лет скидка 50% в семейном номере</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
@@ -398,7 +398,7 @@
           <div class=" text-center">
             <hr class="light">
             <h2 class="section-heading">Хостел на проспекте Петра Столыпина, 3</h2>
-            <img loading="lazy" width="100%" height="auto" src="/img/portfolio/kirova-2020/saratov-hostel-na-kirova-main-600.jpg" class="img-responsive" alt="Саратов хостел, Хостел на проспекте Кирова, проспект Петра Столыпина, Саратов, 3">
+            <img loading="lazy" width="100%" height="auto" src="/img/portfolio/kirova-2020/saratov-hostel-na-kirova-main-600.jpg" class="img-responsive" alt="Саратов хостел, Хостел на проспекте Петра Столыпина, 3, г. Саратов">
             <hr class="light">
           </div>
         </div>
@@ -409,11 +409,11 @@
         <div class="row no-gutter">
           <div class="col-lg-4 col-sm-6">
             <a class="portfolio-box">
-              <img loading="lazy" src="/img/portfolio/kirova-2020/saratov-hostel-na-kirova-1.jpg" class="img-responsive" alt="Саратов хостел, Кухня, два холодильника, микроволновка">
+              <img loading="lazy" src="/img/portfolio/2025/saratov-hostel-den-i-noch-04.webp" class="img-responsive" alt="Саратов хостел, Кухня, два холодильника, микроволновка">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
-                    Кухня, два холодильника, микроволновка
+                    Кухня, два холодильника, микроволновка, стиральная машина
                   </div>
                   <div class="project-name">
                     Вся необходимая техника
@@ -424,14 +424,14 @@
           </div>
           <div class="col-lg-4 col-sm-6">
             <a class="portfolio-box">
-              <img loading="lazy" src="/img/portfolio/kirova-2020/saratov-hostel-na-kirova-2.jpg" class="img-responsive" alt="Саратов хостел, кухня">
+              <img loading="lazy" src="/img/portfolio/2025/saratov-hostel-den-i-noch-03.webp" class="img-responsive" alt="Саратов хостел, кухня, диван и столик для постояльцев">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
                     На кухне много места для постояльцев
                   </div>
                   <div class="project-name">
-                    Места покушать хватит всем
+                    Места покушать и отдохнуть хватит всем
                   </div>
                 </div>
               </div>
@@ -439,11 +439,11 @@
           </div>
           <div class="col-lg-4 col-sm-6">
             <a class="portfolio-box">
-              <img loading="lazy" src="/img/portfolio/kirova-2020/saratov-hostel-na-kirova-01.jpg" class="img-responsive" alt="Саратов хостел, вход в хостел, крыльцо">
+              <img loading="lazy" src="/img/portfolio/2025/saratov-hostel-den-i-noch-17.webp" class="img-responsive" alt="Саратов хостел, вход в хостел, крыльцо, отдельный вход со двора">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
-                    Вид на вход
+                    Входная дверь хостела
                   </div>
                   <div class="project-name">
                     Звоните в домофон
@@ -454,14 +454,14 @@
           </div>
           <div class="col-lg-4 col-sm-6">
             <a class="portfolio-box">
-              <img loading="lazy" src="/img/portfolio/kirova-2020/saratov-hostel-na-kirova-05.jpg" class="img-responsive" alt="Саратов хостел, кухня">
+              <img loading="lazy" src="/img/portfolio/2025/saratov-hostel-den-i-noch-13.webp" class="img-responsive" alt="Саратов хостел, женская комната на четыре человека">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
-                    Женская общая комната
+                    Женская общая комната на 4 человека
                   </div>
                   <div class="project-name">
-                    не тесно
+                    не тесно, стоиомость места 900&nbsp;₽
                   </div>
                 </div>
               </div>
@@ -469,13 +469,14 @@
           </div>
           <div class="col-lg-4 col-sm-6">
             <a class="portfolio-box">
-              <img loading="lazy" src="/img/portfolio/kirova-2020/saratov-hostel-na-kirova-06.jpg" class="img-responsive" alt="Саратов хостел, туалетная комната">
+              <img loading="lazy" src="/img/portfolio/2025/saratov-hostel-den-i-noch-05.webp" class="img-responsive" alt="Саратов хостел, мужская комната на восемь человек, шкафчики для хранения вещей">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
-                    Мужская общая комната
+                    Мужская общая комната на 8 человек
                   </div>
                   <div class="project-name">
+                    стоимость места 800&nbsp;₽
                   </div>
                 </div>
               </div>
@@ -483,7 +484,7 @@
           </div>
           <div class="col-lg-4 col-sm-6">
             <a class="portfolio-box">
-              <img loading="lazy" src="/img/portfolio/kirova-2020/saratov-hostel-na-kirova-07.jpg" class="img-responsive" alt="Саратов хостел, женский номер">
+              <img loading="lazy" src="/img/portfolio/2025/saratov-hostel-den-i-noch-12.webp" class="img-responsive" alt="Саратов хостел, женский номер">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
@@ -498,7 +499,52 @@
           </div>
           <div class="col-lg-4 col-sm-6">
             <a class="portfolio-box">
-              <img loading="lazy" src="/img/portfolio/kirova-2020/saratov-hostel-na-kirova-14.jpg" class="img-responsive" alt="Саратов хостел, женский номер">
+              <img loading="lazy" src="/img/portfolio/2025/saratov-hostel-den-i-noch-10.webp" class="img-responsive" alt="Саратов хостел, мужская комната">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    Мужской номер
+                  </div>
+                  <div class="project-name">
+                    стоиомость места 900&nbsp;₽
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box">
+              <img loading="lazy" src="/img/portfolio/2025/saratov-hostel-den-i-noch-15.webp" class="img-responsive" alt="Саратов хостел, отдельный семейный номер">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    Семейный номер на четыре человека
+                  </div>
+                  <div class="project-name">
+                    стоимость номера 2000-3000&nbsp;₽ в зависимости от количества постояльцев
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box">
+              <img loading="lazy" src="/img/portfolio/2025/saratov-hostel-den-i-noch-14.webp" class="img-responsive" alt="Саратов хостел, семейный номер">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    Семейный номер
+                  </div>
+                  <div class="project-name">
+                    Двуспальная и двухъярусная кровати
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box">
+              <img loading="lazy" src="/img/portfolio/2025/saratov-hostel-den-i-noch-18.webp" class="img-responsive" alt="Саратов хостел, туалет">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
@@ -512,7 +558,7 @@
           </div>
           <div class="col-lg-4 col-sm-6">
             <a class="portfolio-box">
-              <img loading="lazy" src="/img/portfolio/kirova-2020/saratov-hostel-na-kirova-12.jpg" class="img-responsive" alt="Саратов хостел, ванная комната">
+              <img loading="lazy" src="/img/portfolio/2025/saratov-hostel-den-i-noch-20.webp" class="img-responsive" alt="Саратов хостел, душ">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
@@ -526,7 +572,7 @@
           </div>
           <div class="col-lg-4 col-sm-6">
             <a class="portfolio-box">
-              <img loading="lazy" src="/img/portfolio/kirova-2020/saratov-hostel-na-kirova-13.jpg" class="img-responsive" alt="Саратов хостел, ванная комната">
+              <img loading="lazy" src="/img/portfolio/2025/saratov-hostel-den-i-noch-19.webp" class="img-responsive" alt="Саратов хостел, ванная комната">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
@@ -563,7 +609,7 @@
     <?php
       date_default_timezone_set('Europe/Moscow');
       $currentdate = date('d.m.Y');
-      $tomorrowdate = new DateTime('tomorrow');  
+      $tomorrowdate = (new DateTime())->modify('+1 day');  
     ?>
     <section id="contact">
       <div class="container">
@@ -571,7 +617,7 @@
           <div class="col-lg-8 col-lg-offset-2 text-center">
             <h2 class="section-heading">Забронируйте сейчас</h2>
             <hr class="primary">
-            <p>Забронировать место или номер в <b>хостеле на проспекте Петра Столыпина (Кирова)</b> можно по телефону и в мессенджерах: <a href="tel:+79179840504">+7 (917) 984-05-04</a>, а также по почте: <a href="mailto:kattat69@mail.ru">kattat69@mail.ru</a>.</p>
+            <p>Забронировать место или номер в <b>хостеле на проспекте Петра Столыпина (Кирова)</b> можно по телефону и в мессенджерах: <a href="tel:+79179840504">+7 (917) 984-05-04</a>, а также по почте: <a href="mailto:hostel.denjinoch@yandex.ru">hostel.denjinoch@yandex.ru</a>.</p>
             <hr class="primary">
           </div>
         </div>
@@ -580,18 +626,31 @@
             <h4 class="section-heading">Забронировать через звонок</h4>
             <p>
               <a href="tel:+79179840504">
-                <i class="fa fa-volume-control-phone fa-3x wow bounceIn"></i>
+                <i class="fa fa-phone fa-3x wow bounceIn"></i>
               </a>
             </p>
           </div>
           <div class="col-xs-12 col-sm-6 col-md-4 text-center">
             <h4 class="section-heading">Забронировать по WhatsApp</h4>
             <p>
-              <a href="https://wa.me/79179853700">
+              <a href="https://wa.me/79179840504">
                 <i class="fa fa-whatsapp fa-3x wow bounceIn" data-wow-delay=".1s"></i>
               </a>
             </p>
           </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 text-center">
+          <h4 class="section-heading">Забронировать в Telegram</h4>
+          <p>
+            <a href="https://t.me/+79179840504">
+              <span class="telegram-icon wow bounceIn" data-wow-delay=".1s">
+              <svg width="52" height="52" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#44a69a" d="M18.384,22.779c0.322,0.228 0.737,0.285 1.107,0.145c0.37,-0.141 0.642,-0.457 0.724,-0.84c0.869,-4.084 2.977,-14.421 3.768,-18.136c0.06,-0.28 -0.04,-0.571 -0.26,-0.758c-0.22,-0.187 -0.525,-0.241 -0.797,-0.14c-4.193,1.552 -17.106,6.397 -22.384,8.35c-0.335,0.124 -0.553,0.446 -0.542,0.799c0.012,0.354 0.25,0.661 0.593,0.764c2.367,0.708 5.474,1.693 5.474,1.693c0,0 1.452,4.385 2.209,6.615c0.095,0.28 0.314,0.5 0.603,0.576c0.288,0.075 0.596,-0.004 0.811,-0.207c1.216,-1.148 3.096,-2.923 3.096,-2.923c0,0 3.572,2.619 5.598,4.062Zm-11.01,-8.677l1.679,5.538l0.373,-3.507c0,0 6.487,-5.851 10.185,-9.186c0.108,-0.098 0.123,-0.262 0.033,-0.377c-0.089,-0.115 -0.253,-0.142 -0.376,-0.064c-4.286,2.737 -11.894,7.596 -11.894,7.596Z"/>
+                <path fill="white" d="m7.374 13.102 1.679 5.538.373-3.507s6.487-5.851 10.185-9.186c.108-.098.123-.262.033-.377-.09-.115-.254-.142-.376-.064-4.287 2.737-11.894 7.596-11.894 7.596z"/>
+              </svg>
+            </span>
+            </a>
+          </p>
+        </div>
           <div class="col-xs-12 col-sm-6 col-md-4 text-center">
             <h4 class="section-heading">Наша группа VK</h4>
             <p>
@@ -603,7 +662,7 @@
           <div class="col-xs-12 col-sm-6 col-md-4 text-center">
             <h4 class="section-heading">Написать на Email</h4>
             <p>
-              <a href="mailto:kattat69@mail.ru">
+              <a href="mailto:hostel.denjinoch@yandex.ru">
                 <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
               </a>
             </p>
@@ -623,19 +682,25 @@
     </script>
     <!-- Put this div tag to the place, where the Comments block will be -->
     <div align="center">
-    <div id="vk_comments"></div>
-    </div>
-    <!--
-      <div align="center" id="TA_sswidecollectreview972" class="TA_sswidecollectreview">
-      
-          <ul id="Z17wVQn3M" class="TA_links NGbohly1XZx">
-              <li id="dN9yuMlq7P6" class="GRBrPtBIbJ">
-                  <img src="//www.tripadvisor.ru/img/cdsi/img2/branding/150_logo-16124-2.png" alt="TripAdvisor" />
-              </li>
-          </ul>
+      <!-- Fallback content -->
+      <div id="vk_comments_fallback" style="display: none;">
+        <p>Отзывы из ВК сейчас недоступны. Попробуйте позже.</p>
       </div>
-      <script src="https://www.jscache.com/wejs?wtype=sswidecollectreview&amp;uniq=972&amp;locationId=7734220&amp;lang=ru&amp;border=true&amp;display_version=2"></script>
-      -->
+      <!-- Widget container -->
+      <div id="vk_comments" style="opacity: 0;"></div>
+    </div>
+    <?php
+      /*
+        <div align="center" id="TA_sswidecollectreview972" class="TA_sswidecollectreview">
+          <ul id="Z17wVQn3M" class="TA_links NGbohly1XZx">
+            <li id="dN9yuMlq7P6" class="GRBrPtBIbJ">
+              <img src="//www.tripadvisor.ru/img/cdsi/img2/branding/150_logo-16124-2.png" alt="TripAdvisor" />
+            </li>
+          </ul>
+        </div>
+        <script src="https://www.jscache.com/wejs?wtype=sswidecollectreview&amp;uniq=972&amp;locationId=7734220&amp;lang=ru&amp;border=true&amp;display_version=2"></script>
+      */
+    ?>
     </div>
     </div>
     </section>
@@ -697,27 +762,9 @@
     </div>
     <br />
     <br />
-    <?
-      /*
-      <div style="display:none" itemscope itemtype="https://schema.org/Hostel">
-        <span itemprop="name">День&Ночь</span>
-        <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-          <span itemprop="ratingValue">4.8</span> основано на <span itemprop="reviewCount"><?php echo $countReviews; ?>
-    </span> отзывов
-    </div>
-    <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-    <span itemprop="streetAddress">ул. Вольская</span>
-    <span itemprop="addressLocality">Саратов</span>,
-    <span itemprop="addressRegion">Саратовская обл.</span> <span itemprop="postalCode">410028</span>
-    </div>
-    <span itemprop="telephone">(917)985-37-00, (927)629-15-97</span>
-    <a itemprop="url" href="https://sarhostel.ru">https://sarhostel.ru</a> Price Range: <span itemprop="priceRange">700-1100 руб.</span>
-    </div>
-    */ ?>
-
-    <h4>2015-<?php echo date("Y"); ?> &copy; <i>Хостел «День и Ночь»</i></h4>
-    <p>ИП Лыков Аркадий Иванович</p>
-    <p>ОГРН 311642225100019</p>
+    <h4>2015-<?php echo date("Y"); ?> &copy; <i>Хостел «День&Ночь»</i></h4>
+    <p>ИП Воронина Татьяна Михайловна</p>
+    <p>ОГРНИП 325645700093795</p>
     </div>
     <br>
     <div class="center-vertically">
@@ -748,7 +795,7 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/jquery.magnific-popup.min.js"></script>
-    <link rel="stylesheet" href="/css/jquery.magnific-popup.min.js">
+    <link rel="stylesheet" href="/css/magnific-popup.min.css">
     <script src="/js/fittext.js"></script>
     <script src="/js/creative.js"></script>
     <script>
@@ -766,11 +813,18 @@
           var selector = $(this).attr('href');
           var scrollBlock = $(this).attr('data-scroll-block') || 'center';
           var viewEl = document.querySelector(selector);
-          viewEl.scrollIntoView({block: scrollBlock, behavior: "smooth"});
+          
+          // Закрываем мобильное меню при клике на ссылку
+          $('.navbar-collapse').collapse('hide');
+          
+          // Небольшая задержка для корректного закрытия меню
+          setTimeout(function() {
+              viewEl.scrollIntoView({block: scrollBlock, behavior: "smooth"});
+          }, 300);
       });
     </script>
     <script>
-      //var track = '<?php echo $countReviews; ?>';
+      //var track = '<?php echo isset($countReviews) ? $countReviews : '0'; ?>';
       //console.log(track);
       // Offset for Main Navigation
       /*
@@ -781,13 +835,63 @@
       })
       */
     </script>
-    <script type="text/javascript">
-      var screenWidth = $(window).width() < 730 ? $(window).width() : "665";
-      VK.Widgets.Comments("vk_comments", {
-          limit: 10,
-          width: screenWidth,
-          attach: "*"
+    <script src="/js/vk_comments_widget.js"></script>
+    <!-- Дополнительные исправления для мобильного меню -->
+    <script>
+      $(document).ready(function() {
+        // Исправление для мобильного меню Bootstrap
+        $(document).on('click.bs.collapse.data-api', '[data-toggle="collapse"]', function (e) {
+          var $this = $(this);
+          if (!$this.attr('data-target')) e.preventDefault();
+          
+          var $target = getTargetFromTrigger($this);
+          var data = $target.data('bs.collapse');
+          var option = data ? 'toggle' : $.extend({}, $this.data(), { trigger: this });
+          
+          $target.collapse(option);
+        });
+        
+        function getTargetFromTrigger($trigger) {
+          var href;
+          var target = $trigger.attr('data-target') || (href = $trigger.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '');
+          return $(target);
+        }
+        
+        // Синхронизация состояния бургер-кнопки
+        $('.navbar-collapse').on('show.bs.collapse', function () {
+          $('.navbar-toggle').removeClass('collapsed').attr('aria-expanded', 'true');
+        });
+        
+        $('.navbar-collapse').on('hide.bs.collapse', function () {
+          $('.navbar-toggle').addClass('collapsed').attr('aria-expanded', 'false');
+        });
+        
+        // Предотвращение двойного клика на мобильных устройствах
+        var touchStartY = 0;
+        var touchEndY = 0;
+        
+        $(document).on('touchstart', '.navbar-toggle', function(e) {
+          touchStartY = e.originalEvent.touches[0].clientY;
+        });
+        
+        $(document).on('touchend', '.navbar-toggle', function(e) {
+          touchEndY = e.originalEvent.changedTouches[0].clientY;
+          if (Math.abs(touchStartY - touchEndY) < 10) {
+            // Это клик, а не свайп
+            e.preventDefault();
+            $(this).click();
+          }
+        });
       });
     </script>
+    <!-- <script>
+      new WOW({
+        boxClass:     'wow',
+        animateClass: 'animated',
+        offset:       0,
+        mobile:       true,
+        live:         true
+      }).init();
+    </script> -->
   </body>
 </html>

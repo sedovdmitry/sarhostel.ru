@@ -41,18 +41,12 @@ build/
 
 # Полезное
 SEO.txt
-/otel
 
 # Чувствительные файлы - логи ошибок
 *.error.log
 error_log
 sarhostel.ru.error.log
 test/error_log
-
-# Файлы верификации поисковых систем
-google*.html
-yandex*.html
-wmail*.html
 
 # Тестовые файлы и отладка
 /test/
