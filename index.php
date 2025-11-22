@@ -356,7 +356,7 @@ declare(strict_types=1);
               <h3>Цены от 800 ₽</h3>
                 <p class="text-muted">Место в мужском номере: 800&nbsp;₽.</p>
                 <p class="text-muted">Место в женском номере: 900&nbsp;₽.</p>
-                <p class="text-muted">Семейный номер: от 2000&nbsp;₽.</p>
+                <p class="text-muted">Семейный номер: от&nbsp;2000&nbsp;₽.</p>
             </div>
           </div>
         </div>
