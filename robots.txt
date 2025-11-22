@@ -1,6 +1,4 @@
 User-agent: *
-Disallow: /
-Allow: /$
 Disallow: /.git
 Disallow: /less
 Disallow: /css
@@ -11,18 +9,9 @@ Disallow: /node_modules
 Disallow: /styles
 
 User-agent: Yandex
-Disallow: /
-Allow: /$
-Disallow: /.git
-Disallow: /less
-Disallow: /css
-Disallow: /fonts
-Disallow: /js
-Disallow: /font-awesome
-Disallow: /node_modules
-Disallow: /styles
 Clean-param: utm
-Clean-param: utm_ya_campaign
+Clean-param: utm_*
 Clean-param: a
+
 Host: sarhostel.ru
 Sitemap: https://sarhostel.ru/sitemap.xml
