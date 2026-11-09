@@ -1,0 +1,6 @@
+schema: spec-driven
+created: 2026-11-09
+complexity: minimal
+skip_specs: true
+goal: Cookie-баннер всегда виден и не выглядит сломанным; страница /privacy
+  читается как юридический документ на тёмном фоне в стилистике футера
