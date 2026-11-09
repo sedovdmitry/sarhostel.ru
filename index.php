@@ -93,6 +93,18 @@ declare(strict_types=1);
           margin-left: 0;
         }
       }
+      /* Мобильные: фото 300px с align=left оставляет ~60-90px на текст —
+         висячие слова («Новый и…») и перенос текста под фото. */
+      @media (max-width: 767px) {
+        #about img[align="left"] {
+          float: none;
+          display: block;
+          margin: 0 auto 15px;
+          max-width: 100%;
+          height: auto;
+          padding-right: 0 !important;
+        }
+      }
     </style>
     <script type="application/ld+json">
     {

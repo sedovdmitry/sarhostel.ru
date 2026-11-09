@@ -1,0 +1,15 @@
+schema: spec-driven
+openlore:
+  version: 1.2.0
+  generatedAt: 2026-11-09T11:38:24.790Z
+  domains:
+    - font-awesome
+    - js
+    - less
+    - styles
+  confidence: 0.72
+context: |-
+  # Auto-detected by openlore
+  Tech stack: JavaScript, Bootstrap, Font Awesome, jQuery, Gulp, GitHub Actions
+  Architecture: Custom architecture
+  Domains: agents, amp, css, font-awesome, js, less, privacy, styles, warpweave

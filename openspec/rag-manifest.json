@@ -1,0 +1,72 @@
+{
+  "generatedAt": "2026-11-09T11:38:24.812Z",
+  "specVersion": "1.0.0",
+  "domains": [
+    {
+      "domain": "font-awesome",
+      "specPath": "openspec/specs/font-awesome/spec.md",
+      "sourceFiles": [
+        "C:\\OSPanel\\domains\\sarhostel\\css\\font-awesome.css",
+        "C:\\OSPanel\\domains\\sarhostel\\font-awesome\\scss\\_animated.scss",
+        "C:\\OSPanel\\domains\\sarhostel\\font-awesome\\scss\\_bordered-pulled.scss",
+        "C:\\OSPanel\\domains\\sarhostel\\font-awesome\\scss\\_core.scss",
+        "C:\\OSPanel\\domains\\sarhostel\\font-awesome\\scss\\_fixed-width.scss",
+        "C:\\OSPanel\\domains\\sarhostel\\font-awesome\\scss\\_icons.scss",
+        "C:\\OSPanel\\domains\\sarhostel\\font-awesome\\scss\\_larger.scss",
+        "C:\\OSPanel\\domains\\sarhostel\\font-awesome\\scss\\_list.scss",
+        "C:\\OSPanel\\domains\\sarhostel\\font-awesome\\scss\\_mixins.scss",
+        "C:\\OSPanel\\domains\\sarhostel\\font-awesome\\scss\\_path.scss",
+        "C:\\OSPanel\\domains\\sarhostel\\font-awesome\\scss\\_rotated-flipped.scss",
+        "C:\\OSPanel\\domains\\sarhostel\\font-awesome\\scss\\_stacked.scss",
+        "C:\\OSPanel\\domains\\sarhostel\\font-awesome\\scss\\_variables.scss",
+        "C:\\OSPanel\\domains\\sarhostel\\font-awesome\\scss\\font-awesome.scss"
+      ],
+      "requirementCount": 8,
+      "dependsOn": [],
+      "calledBy": []
+    },
+    {
+      "domain": "js",
+      "specPath": "openspec/specs/js/spec.md",
+      "sourceFiles": [
+        "C:\\OSPanel\\domains\\sarhostel\\js\\classie.js",
+        "C:\\OSPanel\\domains\\sarhostel\\js\\creative.js",
+        "C:\\OSPanel\\domains\\sarhostel\\js\\all.js",
+        "C:\\OSPanel\\domains\\sarhostel\\js\\fittext.js",
+        "C:\\OSPanel\\domains\\sarhostel\\js\\vk_comments_widget.js",
+        "C:\\OSPanel\\domains\\sarhostel\\js\\bootstrap.js",
+        "C:\\OSPanel\\domains\\sarhostel\\js\\cbpAnimatedHeader.js",
+        "C:\\OSPanel\\domains\\sarhostel\\js\\index.html",
+        "C:\\OSPanel\\domains\\sarhostel\\js\\jquery.fittext.js",
+        "C:\\OSPanel\\domains\\sarhostel\\js\\jquery.js"
+      ],
+      "requirementCount": 9,
+      "dependsOn": [],
+      "calledBy": []
+    },
+    {
+      "domain": "less",
+      "specPath": "openspec/specs/less/spec.md",
+      "sourceFiles": [
+        "C:\\OSPanel\\domains\\sarhostel\\less\\creative.less",
+        "C:\\OSPanel\\domains\\sarhostel\\less\\mixins.less",
+        "C:\\OSPanel\\domains\\sarhostel\\less\\variables.less"
+      ],
+      "requirementCount": 6,
+      "dependsOn": [],
+      "calledBy": []
+    },
+    {
+      "domain": "styles",
+      "specPath": "openspec/specs/styles/spec.md",
+      "sourceFiles": [
+        "C:\\OSPanel\\domains\\sarhostel\\styles\\mobile-fix.css",
+        "C:\\OSPanel\\domains\\sarhostel\\styles\\buttons.css",
+        "C:\\OSPanel\\domains\\sarhostel\\styles\\bundle.css"
+      ],
+      "requirementCount": 15,
+      "dependsOn": [],
+      "calledBy": []
+    }
+  ]
+}
