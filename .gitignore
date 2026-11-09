@@ -17,6 +17,9 @@ cache/
 tmp/
 *.tmp
 
+# Brotli pre-compressed static assets (генерируются на сервере, nginx brotli_static)
+*.br
+
 # Зависимости и билды
 node_modules/
 vendor/
