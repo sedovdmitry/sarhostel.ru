@@ -21,12 +21,7 @@ declare(strict_types=1);
     <link rel="stylesheet" href="styles/main.min.css" type="text/css">
     <link rel="stylesheet" href="styles/buttons.css" type="text/css">
     <link rel="stylesheet" href="styles/mobile-fix.css" type="text/css">
-    <!-- Custom Fonts 
-      <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>-->
-    <link rel="preconnect" href="//fonts.googleapis.com">
-    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
-    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,400italic,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Lora:400,400italic,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/fonts.css" type="text/css">
     <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="css/animate.min.css" type="text/css"> 
     <!-- Custom CSS 
@@ -169,16 +164,6 @@ declare(strict_types=1);
       <div><img src="//mc.yandex.ru/watch/34757035" style="position:absolute; left:-9999px;" alt="" /></div>
     </noscript>
     <!-- /Yandex.Metrika counter -->
-    <!-- Google tag (gtag.js) -->
-    <script async src="//www.googletagmanager.com/gtag/js?id=G-PNEQ1VWRSM"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-PNEQ1VWRSM');
-    </script>
-    <!-- End Google tag (gtag.js) -->
     <!--LiveInternet counter-->
     <script>
       new Image().src = "//counter.yadro.ru/hit?r"+
@@ -617,7 +602,7 @@ declare(strict_types=1);
           <div class="col-lg-8 col-lg-offset-2 text-center">
             <h2 class="section-heading">Забронируйте сейчас</h2>
             <hr class="primary">
-            <p>Забронировать место или номер в <b>хостеле на проспекте Петра Столыпина (Кирова)</b> можно по телефону и в мессенджерах: <a href="tel:+79179840504">+7 (917) 984-05-04</a>, а также по почте: <a href="mailto:hostel.denjinoch@yandex.ru">hostel.denjinoch@yandex.ru</a>.</p>
+            <p>Забронировать место или номер в <b>хостеле на проспекте Петра Столыпина</b> можно по телефону и в мессенджерах: <a href="tel:+79179840504">+7 (917) 984-05-04</a>, а также по почте: <a href="mailto:hostel.denjinoch@yandex.ru">hostel.denjinoch@yandex.ru</a>.</p>
             <hr class="primary">
           </div>
         </div>
@@ -736,35 +721,30 @@ declare(strict_types=1);
     <br />
     <br />
     <hr>
-    <!-- HTML код управляемого элемента -->
     <br>
-    <input id="conf" type="button" class="btn btn-default btn-xs" value="Заявление о конфиденциальности">
-    <!-- HTML код сворачиваемого элемента -->
-    <div class="toggle_conf" align="left" style="display: none">
-      <br/>
-      <!--<p class="toggle_conf text-faded" style="display: none"></p>
-        <h3 class="toggle_conf text-faded" style="display: none">Откуда пошло слово "хостел"?</h3>-->
-      <p class="toggle_conf text-faded" style="display: none">
-       Наш сайт <a href="//sarhostel.ru">sarhostel.ru</a> не собирает, не хранит и не обрабатывает персональные данные пользователей. У нас интегрированы виджеты от сервисов otelms.com и социальной сети ВКонтакте. На стороне этих веб-приложений и осуществляется хранение, сбор и обработка данных при комментировании или при онлайн-бронировании места в нашем <b>хостеле</b>.
-      </p>
-      <div class="center-vertically">
-        <!-- begin of Top100 code -->
-          <script id="top100Counter" type="text/javascript" src="//counter.rambler.ru/top100.jcn?4402757"></script>
-          <noscript>
-          <img loading="lazy" src="//counter.rambler.ru/top100.cnt?4402757" alt="" width="1" height="1" border="0" />
-          </noscript>
-        <!-- end of Top100 code -->
-        <!--LiveInternet logo--><a href="//www.liveinternet.ru/click"
-        target="_blank"><img src="//counter.yadro.ru/logo?50.6"
-        title="LiveInternet"
-        alt="" style="border:0" width="31" height="31"/></a><!--/LiveInternet-->
-      </div>
+    <p>
+      <a href="/privacy/" class="btn btn-default btn-xs" style="text-decoration:none;">
+        <i class="fa fa-shield"></i> Политика конфиденциальности
+      </a>
+    </p>
+    <div class="center-vertically" style="margin-top: 15px;">
+      <!-- begin of Top100 code -->
+        <script id="top100Counter" type="text/javascript" src="//counter.rambler.ru/top100.jcn?4402757"></script>
+        <noscript>
+        <img loading="lazy" src="//counter.rambler.ru/top100.cnt?4402757" alt="" width="1" height="1" border="0" />
+        </noscript>
+      <!-- end of Top100 code -->
+      <!--LiveInternet logo--><a href="//www.liveinternet.ru/click"
+      target="_blank"><img src="//counter.yadro.ru/logo?50.6"
+      title="LiveInternet"
+      alt="" style="border:0" width="31" height="31"/></a><!--/LiveInternet-->
     </div>
     <br />
     <br />
     <h4>2015-<?php echo date("Y"); ?> &copy; <i>Хостел «День&Ночь»</i></h4>
     <p>ИП Воронина Татьяна Михайловна</p>
     <p>ОГРНИП 325645700093795</p>
+    <p><a href="/privacy/" style="color: #44a69a; text-decoration: underline; font-size: 13px;">Политика в отношении обработки персональных данных (152-ФЗ)</a></p>
     </div>
     <br>
     <div class="center-vertically">
@@ -777,6 +757,17 @@ declare(strict_types=1);
     <a class="btn btn-defalt toTop">Наверх!</a>
     </div>
     </aside>
+    <!-- Cookie Consent Banner (152-ФЗ) -->
+    <div id="cookie_directive_container" style="display: none;">
+      <nav class="navbar navbar-default navbar-fixed-bottom" style="background: transparent; border: none; z-index: 9999; margin-bottom: 0;">
+        <div class="container" style="padding: 0 15px 15px 15px;">
+          <div id="cookie_accept" class="alert alert-info fade in" style="margin-bottom: 0; background-color: rgba(34, 34, 34, 0.95); border: 1px solid #44a69a; color: #fff; box-shadow: 0 4px 16px rgba(0,0,0,0.3); border-radius: 6px;">
+            <button type="button" class="btn btn-primary btn-xs close" style="opacity: 1; float: right; margin-left: 15px; color: #fff; background-color: #44a69a; border-color: #3d9489; padding: 6px 14px; font-weight: 600; text-shadow: none; border-radius: 4px;">Понятно</button>
+            <span style="font-size: 13px; line-height: 24px;">Мы используем файлы cookie и системы веб-аналитики для сбора технических данных и улучшения работы сайта. Продолжая просмотр, вы соглашаетесь с <a href="/privacy/" target="_blank" style="color: #44a69a; text-decoration: underline;">Политикой обработки персональных данных</a>.</span>
+          </div>
+        </div>
+      </nav>
+    </div>
     <script src="/js/jquery.js"></script>
     <script src="/js/jquery.cookie.min.js"></script>
     <script src="/js/recliner.min.js"></script>
@@ -790,7 +781,6 @@ declare(strict_types=1);
         });
       });
     </script>
-    <script src="/otel/js/jquery-ui-1.8.18.custom.min.js"></script>
     <script src="/js/wow.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="/js/bootstrap.min.js"></script>
@@ -802,8 +792,14 @@ declare(strict_types=1);
       $("#hostel_history").click(function() {
           $(".toggle").toggle("slow");
       });
-      $("#conf").click(function() {
-          $(".toggle_conf").toggle("slow");
+      // Cookie consent banner
+      if (!$.cookie('cookies_consent')) {
+          $('#cookie_directive_container').show();
+      }
+      $('#cookie_accept .close, #cookie_accept .btn').click(function(e) {
+          e.preventDefault();
+          $.cookie('cookies_consent', '1', { expires: 30, path: '/' });
+          $('#cookie_directive_container').fadeOut('slow');
       });
       $(".toTop").click(function() {
           window.scrollTo({top: 0, behavior: "smooth"});
