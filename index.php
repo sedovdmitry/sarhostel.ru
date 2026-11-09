@@ -61,6 +61,38 @@ declare(strict_types=1);
         justify-content: center;
         gap: 12px;
       }
+      .cookie-bar {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 12px 15px;
+        background: #222;
+        color: #fff;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+      .cookie-bar a {
+        color: #5fc4b6;
+        text-decoration: underline;
+      }
+      .cookie-bar .btn {
+        flex-shrink: 0;
+        margin-left: auto;
+      }
+      @media (max-width: 767px) {
+        .cookie-bar {
+          flex-direction: column;
+          text-align: center;
+        }
+        .cookie-bar .btn {
+          margin-left: 0;
+        }
+      }
     </style>
     <script type="application/ld+json">
     {
@@ -722,11 +754,6 @@ declare(strict_types=1);
     <br />
     <hr>
     <br>
-    <p>
-      <a href="/privacy/" class="btn btn-default btn-xs" style="text-decoration:none;">
-        <i class="fa fa-shield"></i> Политика конфиденциальности
-      </a>
-    </p>
     <div class="center-vertically" style="margin-top: 15px;">
       <!-- begin of Top100 code -->
         <script id="top100Counter" type="text/javascript" src="//counter.rambler.ru/top100.jcn?4402757"></script>
@@ -759,14 +786,10 @@ declare(strict_types=1);
     </aside>
     <!-- Cookie Consent Banner (152-ФЗ) -->
     <div id="cookie_directive_container" style="display: none;">
-      <nav class="navbar navbar-default navbar-fixed-bottom" style="background: transparent; border: none; z-index: 9999; margin-bottom: 0;">
-        <div class="container" style="padding: 0 15px 15px 15px;">
-          <div id="cookie_accept" class="alert alert-info fade in" style="margin-bottom: 0; background-color: rgba(34, 34, 34, 0.95); border: 1px solid #44a69a; color: #fff; box-shadow: 0 4px 16px rgba(0,0,0,0.3); border-radius: 6px;">
-            <button type="button" class="btn btn-primary btn-xs close" style="opacity: 1; float: right; margin-left: 15px; color: #fff; background-color: #44a69a; border-color: #3d9489; padding: 6px 14px; font-weight: 600; text-shadow: none; border-radius: 4px;">Понятно</button>
-            <span style="font-size: 13px; line-height: 24px;">Мы используем файлы cookie и системы веб-аналитики для сбора технических данных и улучшения работы сайта. Продолжая просмотр, вы соглашаетесь с <a href="/privacy/" target="_blank" style="color: #44a69a; text-decoration: underline;">Политикой обработки персональных данных</a>.</span>
-          </div>
-        </div>
-      </nav>
+      <div id="cookie_accept" class="cookie-bar">
+        <span>Мы используем файлы cookie и системы веб-аналитики для сбора технических данных и улучшения работы сайта. Продолжая просмотр, вы соглашаетесь с <a href="/privacy/" target="_blank">Политикой обработки персональных данных</a>.</span>
+        <button type="button" class="btn btn-primary">Понятно</button>
+      </div>
     </div>
     <script src="/js/jquery.js"></script>
     <script src="/js/jquery.cookie.min.js"></script>

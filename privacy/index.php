@@ -17,7 +17,7 @@ declare(strict_types=1);
     <link rel="stylesheet" href="/css/fonts.css" type="text/css">
     <style>
         body {
-            background-color: #f7f9fa;
+            background-color: #222;
             color: #2c3e50;
             line-height: 1.65;
             padding-top: 30px;
@@ -55,7 +55,7 @@ declare(strict_types=1);
         }
         .footer-note {
             font-size: 13px;
-            color: #7f8c8d;
+            color: #95a5a6;
             text-align: center;
             margin-top: 20px;
         }
